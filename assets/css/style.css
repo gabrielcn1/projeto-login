@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+:root {
+    --cor-fundo: #6A4C93;
+    --cor-secundadria: #7bb124;
+    --cor-fonte: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-fundo);
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.445);
+}
+
+.form_image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--cor-secundadria);
+}
+
+.form_image img {
+    width: 35rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.form_header {
+    display: flex;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+}
+
+.button_header {
+    display: flex;
+    align-items: center;
+}
+
+.button_header button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--cor-fundo);
+    padding: 0.6rem 1.2rem;
+}
+
+.button_header button:hover {
+    background-color: #6b558d;
+}
+
+.button_header button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.form_header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #6c63ff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input_group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input_box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #00000046;
+}
+
+.input_box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input_box input:focus {
+    outline: 2px inset var(--cor-fundo);    
+}
+
+.input_box label, .gender_title h6 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #000000e0;
+}
+
+.input_box input::placeholder {
+    color: #00000083;
+}
+
+.gender_group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0.5rem;
+}
+
+.gender_input {
+    display: flex;
+    align-items: center;
+}
+
+.gender_input input {
+    margin-right: 0.35rem;
+}
+
+.gender_input label {
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: #000000c9;
+}
+
+.continue_button button {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 0.63rem;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--cor-fundo);
+    cursor: pointer;
+    box-shadow: 0px 0px 1px #0000009c;
+}
+
+.continue_button button:hover {
+    background-color: #6b558d;
+}
+
+.continue_button button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1330px) {
+    .form_image {
+        display: none;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1124px){
+    .container {
+        width: 90%;
+        height: auto;
+    }
+
+    .input_group {
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+
+    .gender_input {
+        margin-top: 0.35rem;
+    }
+
+    .gender_group {
+        flex-direction: column;
+    }
+}
